@@ -1,0 +1,80 @@
+body {
+  background: steelblue;
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+}
+.idc{
+  width:50px;
+}
+#tablero {
+  background: url(http://img.freepik.com/free-photo/wooden-texture_1160-686.jpg?size=338&amp;ext=jpg);
+  box-shadow:0 10px 10px -6px rgba(0,0,0,.6);
+  border-radius: 3px;
+  border-collapse: collapse;
+  height: 400px;
+  width: 400px;
+  
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+#K1, #K11, #A1, #A11 {
+    position: relative;
+}
+#K1::before, #K11::before, #A1::before, #A11::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#K1::after, #K11::after, #A1::after, #A11::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+#tablero td {
+  color: #821212;
+  font-size: 36px;
+  text-shadow: 1px 1px 1px rgba(255,255,255,.6);
+  width: 50px;
+  height: 50px;
+}
+#numeracion td{
+  background: steelblue !important;
+  color:#e6e6e6 !important;
+}
+.azul{
+  color:#3f16d4 !important;
+}
+.rojo{
+  color:#8b0e21 !important;
+}
+#color{
+   background: steelblue !important;
+   color:#e6e6e6!important;
+}
+
+#tablero tr:nth-child(odd) td:nth-child(even),
+#tablero tr:nth-child(even) td:nth-child(odd) {
+  background: rgba(0,0,0,.4);
+  padding:2px;
+}
+
+#tablero tr:nth-child(n+13) td {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+}
